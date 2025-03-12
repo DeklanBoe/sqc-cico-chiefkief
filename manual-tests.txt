@@ -73,3 +73,12 @@ Expected results: "non-numerical input should be ignored"
 1. build and run CiCo
 2. enter "abcd" into card field
 Results: characters didnt show up in field when typed
+
+# Module 6: Automatic Card Processing (Ticket 601)
+
+## Test steps
+1. Build and run CiCo.
+2. Enter 00000000 into the field.
+
+## Expected results
+* Should automatically submit the completed card number and move onto the next screen
