@@ -65,6 +65,12 @@ public class Main {
       else {
         Toolkit.getDefaultToolkit().beep();
       }
+
+      // Code added by DBoettcher15 for Ticket 601
+      // Automatically enters the card once reaching max characters
+      if (fb.getDocument().getLength == MAX_LENGTH) {
+        Main.processCard();
+      }
     }
 
     @Override
@@ -285,11 +291,15 @@ public class Main {
     fieldNumber.setForeground(Color.magenta);
     panelMain.add(fieldNumber);
 
+    /*
+    // Code added by DBoettcher15 for Ticket 601
+    // Removes the Update button due to automatic card swipes
     JButton updateButton = new JButton("Update");
     updateButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
     updateButton.addActionListener(new Update());
     updateButton.setForeground(Color.green);
     panelMain.add(updateButton);
+    */
 
     panelMain.add(Box.createVerticalGlue());
 
